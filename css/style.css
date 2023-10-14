@@ -1,21 +1,26 @@
+:root {
+    --trans-pink: #f4a9b7;
+    --trans-blue: #5ccefa;
+}
+
 html {
     font-family: aller, arial, sans-serif;
     font-style: normal;
     font-weight: 700;
-    background: rgb(92, 206, 250);
+    background: var(--trans-blue);
 }
 
 ::selection {
-    background: #f4a9b7;
+    background: var(--trans-pink);
     /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-    background: #f4a9b7;
+    background: var(--trans-pink);
     /* Gecko Browsers */
 }
 
-#mainFooter {
+#main-footer {
     list-style-type: none;
     /* margin-left: -0.5em;
 	margin-right: -0.5em; */
@@ -25,8 +30,12 @@ html {
 
 }
 
-.no-color {
+.white-color-text {
     color: white;
+}
+
+.pink-color-text {
+    color: var(--trans-pink);
 }
 
 .centered-text {
@@ -35,7 +44,7 @@ html {
 }
 
 #font {
-    color: #75cdf8;
+    color: var(--trans-blue);
 }
 
 .list-inline>li {
@@ -46,7 +55,7 @@ html {
 }
 
 
-#youtubeFooterLink {
+#youtube-footer-link {
     color: #c4302b;
 }
 
@@ -58,11 +67,11 @@ html {
     color: #5865f2;
 }
 
-.noDecoration {
+.no-decoration {
     text-decoration: none;
 }
 
-.blackOutline {
+.black-outline {
     text-shadow:
         -1px -1px 0 #000,
         1px -1px 0 #000,
@@ -76,4 +85,44 @@ html {
         1px -1px 0 #FFF,
         -1px 1px 0 #FFF,
         1px 1px 0 #FFF;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+}
+
+.tooltip .tool-tip-text {
+    opacity: 0;
+    transition: opacity 0.2s;
+    /* visibility: hidden; */
+    background-color: var(--trans-pink);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+
+    width: 200px;
+    top: 100%;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.tooltip:hover .tool-tip-text {
+    opacity: 1;
+}
+
+.tooltip .tool-tip-text::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--trans-pink) transparent;
 }
