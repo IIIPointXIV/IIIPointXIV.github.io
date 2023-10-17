@@ -8,17 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Nova">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="ghost_icon_small.png"/>
+    <link rel="icon" type="image/png" href=".\images\ghost_icon_small.png" />
+    <meta property="og:title" content="IIIPointXIV Homepage" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://iiipointxiv.github.io" />
+    <!-- <meta property="og:image" content="http://my.site.com/images/thumb.png" /> -->
+    <meta property="og:description" content="The best damn site you've ever seen!" />
+    <meta name="theme-color" content="#f4a9b7">
+    <!-- Include this to make the og:image larger 
+    <meta name="twitter:card" content="summary_large_image">-->
 </head>
 <header>
     <ul class="list-inline centered-text">
         <li><a href="index.html" class="no-decoration black-outline pink-color-text">Home</a></li>
-        <li><a href=".\blog\mainBlog.html" class="no-decoration black-outline white-color-text">Blog</a></li>
+        <li><a href=".\blog.html" class="no-decoration black-outline white-color-text">Blog</a></li>
         <li><a href="https://www.youtube.com/channel/UCxSMPPD81i-PACG8u_WdPxg" id="youtube-footer-link"
                 class="no-decoration white-outline" target="_blank" rel="noopener noreferrer">YouTube</a></li>
         <li><a href="https://www.twitch.tv/iiipointxiv" class="no-decoration white-outline" id="twitch-footer-link"
                 target="_blank" rel="noopener noreferrer">Twitch</a></li>
-        <li onclick="navigator.clipboard.writeText('iiipointxiv');" id="discord" class="white-outline">
+        <li onclick="navigator.clipboard.writeText('iiipointxiv');" id="discord-header-link" class="white-outline">
             <div class="tooltip">
                 Discord
                 <span class="tool-tip-text black-outline">Click to copy!</span>
@@ -28,47 +36,62 @@
 </header>
 
 <body>
-    <br>
-    <h1 class="centered-text">IIIPointXIV's big(ish) site of goodness!™</h1>
-    <dir class="main-padding">
-        <p>Hello! I am IIIPointXIV and you have somehow found my website!</p>
+    <h1 class="centered-text" style="margin-top: 50px;">IIIPointXIV's big(ish) site of goodness!™</h1>
+    <div class="main-padding" style="margin-top: 100px;margin-bottom: 40px;">
+        <h3>Hello! I am IIIPointXIV and you have somehow found my website!</h3>
         <br>
         <p>I do a lot of random things, so this site holds my blog/thoughts on them! You can go to the blog by clicking
             it
-            up at the top or clicking <a href=".\blog\mainBlog.html">here!</a></p>
-    </dir>
-    <br>
-    <br>
-    <h1 class="centered-text">About Me!</h1>
-    <p>I am a trans girl who has been super nerdy since the day I knew how to be. I started coding using Scratch and
-        MakeBlock oh so long ago, and I loved it so much. I've always liked learning how things work and solving
-        problems. I am actually currently going to college for computer science! (I hate it so so much though) I spend a
-        lot of my time reading (manga and "normal" books), watching anime/TV/movies, playing rhythm games (Etterna,
-        BeatSaber, and osu!catch mainly), and working on this site! Don't forget about the oh so many things I will
-        randomly hyperfocus on and spend way too much time on. Oh yeah, I do work a bit on school, but school has
-        always come easy to me so it doesn't take up too much time.</p>
-    <p>Why does this site look so horrible, you might ask. It's because I hate JavaScript with a passion. Also I'm not a
-        very good UI designer and this is more for fun than anything. More about that <a
-            href="better-than-your-site.html">here.</a></p>
-    <h4>Some random fun facts about me!</h4>
-    <ul>
-        <li>My best time to solve a Rubik's Cube (3x3) is 23 seconds! Though I usually am closer to 30s, I just got lucky.
-        </li>
-        <li>I have wayyyyy too many anime figures. (Click <a href="https://myfigurecollection.net/profile/IIIPointXIV"
-                target="_blank" rel="noopener noreferrer">here</a> to see my list)</li>
-        <li>My fav artists are underscores, Glass Beach, and Ne Obliviscaris. I plan to talk more about them sometime
-        </li>
-        <li>C# is my favorite programming language. Don't fight me.</li>
-        <li>My least favorite is python. I fucking hate that language. (JavaScript is a close second)</li>
-        <li>I watch way too much YouTube/Twitch (I am hoping starting this site helps that)</li>
-        <li>If you wanna get technical I am actually a <a href="https://gender.fandom.com/wiki/Demigirl">demigirl</a>.
-            Basically I am more of a tomboy, but it feels like more
-            than that.</li>
-    </ul>
-    <p>That's it for now! Go to the blog if you wanna see more!</p>
+            up at the top or clicking <a href=".\blog.html">here!</a></p>
+    </div>
+    <hr>
+    <h1 class="centered-text" style="margin-top: 40px;">About Me!</h1>
+    <div class="main-padding" id="about-me">
+        <p>I am a trans girl who has been super nerdy since the day I knew how to be. I started coding using Scratch and
+            MakeBlock oh so long ago, and I loved it so much. I've always liked learning how things work and solving
+            problems. I am actually currently going to college for computer science! (I hate it so so much though) I
+            spend a
+            lot of my time reading (manga and "normal" books), watching anime/TV/movies, playing rhythm games (<a
+                href="https://etternaonline.com/user/IIIPointXIV" target="_blank" rel="noopener noreferrer">Etterna</a>,
+            <a href="https://www.beatleader.xyz/u/76561197997224368" target="_blank" rel="noopener noreferrer">Beat
+                Saber</a>, and <a href="https://osu.ppy.sh/users/16816107" target="_blank"
+                rel="noopener noreferrer">osu!catch</a> mainly), and working on this site! Don't forget about the oh so
+            many
+            things I will
+            randomly hyperfocus on and spend way too much time on. Oh yeah, I do work a bit on school, but school has
+            always come easy to me so it doesn't take up too much time.
+        </p>
+        <p>Why does this site look so horrible, you might ask. It's because I hate JavaScript with a passion. Also I'm
+            not a
+            very good UI designer and this is more for fun than anything. More about that <a
+                href="better-than-your-site.html">here.</a></p>
+        <h4>Some random fun facts about me!</h4>
+        <ul>
+            <li>My best time to solve a Rubik's Cube (3x3) is 23 seconds! Though I usually am closer to 30s, I just got
+                lucky.
+            </li>
+            <li>I have wayyyyy too many anime figures. (Click <a
+                    href="https://myfigurecollection.net/profile/IIIPointXIV" target="_blank"
+                    rel="noopener noreferrer">here</a> to see my list)</li>
+            <li>My fav artists are underscores, Glass Beach, and Ne Obliviscaris. I plan to talk more about them
+                sometime.
+            </li>
+            <li>C# is my favorite programming language. Don't fight me.</li>
+            <li>My least favorite is python. I fucking hate that language. (JavaScript is a close second)</li>
+            <li>I watch way too much YouTube/Twitch (I am hoping starting this site helps that)</li>
+            <li>If you wanna get technical I am actually a <a href="https://gender.fandom.com/wiki/Demigirl"
+                    target="_blank" rel="noopener noreferrer">demigirl</a>.
+                Basically I am more of a tomboy, but it feels like more
+                than that.</li>
+        </ul>
+    </div>
+    <p class="centered-text" style="margin-top: 100px;">That's it for now! Go to the <a href="./blog.html">blog</a> if
+        you wanna see more!</p>
 </body>
 <footer>
     <ul id="main-footer" class="list-inline centered-text">
-        
+
     </ul>
-    </foote
+</footer>
+
+</html>

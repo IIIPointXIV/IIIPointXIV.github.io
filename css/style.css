@@ -1,33 +1,32 @@
 :root {
     --trans-pink: #f4a9b7;
     --trans-blue: #5ccefa;
+    --background-color: var(--trans-blue);
 }
 
 html {
     font-family: aller, arial, sans-serif;
     font-style: normal;
     font-weight: 700;
-    background: var(--trans-blue);
+    background: var(--background-color);
+}
+
+.main-padding {
+    margin-left: 17%;
+    margin-right: 17%;
+    padding: 0px;
+}
+
+#about-me {
+    margin-top: 50px;
 }
 
 ::selection {
     background: var(--trans-pink);
-    /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
     background: var(--trans-pink);
-    /* Gecko Browsers */
-}
-
-#main-footer {
-    list-style-type: none;
-    /* margin-left: -0.5em;
-	margin-right: -0.5em; */
-    padding-left: 0;
-    margin: auto;
-    display: block;
-
 }
 
 .white-color-text {
@@ -38,13 +37,20 @@ html {
     color: var(--trans-pink);
 }
 
-.centered-text {
-    margin: auto;
-    text-align: center;
+hr {
+    margin-left: 30%;
+    margin-right: 30%;
+    color: black;
+    background-color: black;
+    border: none;
+    height: 1px;
 }
 
-#font {
-    color: var(--trans-blue);
+.centered-text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .list-inline>li {
@@ -59,11 +65,19 @@ html {
     color: #c4302b;
 }
 
+#youtube-footer-link:visited {
+    color: #c4302b;
+}
+
 #twitch-header-link {
     color: #8f4efa;
 }
 
-#discord {
+#twitch-header-link:visited {
+    color: #8f4efa;
+}
+
+#discord-header-link {
     color: #5865f2;
 }
 
@@ -95,7 +109,7 @@ html {
 
 .tooltip .tool-tip-text {
     opacity: 0;
-    transition: opacity 0.2s;
+    transition: opacity 0.25s;
     /* visibility: hidden; */
     background-color: var(--trans-pink);
     color: #fff;
