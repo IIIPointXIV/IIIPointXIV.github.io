@@ -104,6 +104,7 @@ hr {
 .tooltip {
     position: relative;
     display: inline-block;
+    text-indent: 0px;
     /* border-bottom: 1px dotted black; */
 }
 
