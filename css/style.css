@@ -62,23 +62,59 @@ hr {
 
 
 #youtube-footer-link {
-    color: #c4302b;
+    color: #ff0033;
 }
 
 #youtube-footer-link:visited {
-    color: #c4302b;
+    color: #ff0033;
 }
 
 #twitch-header-link {
-    color: #8f4efa;
+    color: #9146ff;
 }
 
 #twitch-header-link:visited {
-    color: #8f4efa;
+    color: #9146ff;
 }
 
 #discord-header-link {
-    color: #5865f2;
+    color: #5764ef;
+}
+
+#discord-header-link:visited {
+    color: #5764ef;
+}
+
+#altstream-header-link {
+    color: #f97316;
+}
+
+#altstream-header-link:visited {
+    color: #f97316;
+}
+
+#kofi-header-link {
+    color: #ff5a16;
+}
+
+#kofi-header-link:visited {
+    color: #ff5a16;
+}
+
+#bsky-link {
+    color: #0071ff
+}
+
+#bsky-link:visited {
+    color: #0071ff
+}
+
+#tip-link {
+    color: green;
+}
+
+#tip-link:visited {
+    color: green;
 }
 
 .no-decoration {
