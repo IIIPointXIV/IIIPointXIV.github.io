@@ -29,6 +29,11 @@ html {
     background: var(--trans-pink);
 }
 
+.inline-image {
+    width: 2em;
+    margin-right: 1em;
+}
+
 .white-color-text {
     color: white;
 }
