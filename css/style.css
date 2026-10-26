@@ -58,64 +58,45 @@ hr {
     display: inline-block;
     margin-left: 0.5em;
     margin-right: 0.5em;
+    font-size: xx-large;
 }
 
 .list-inline {
     padding-left: 0px;
 }
 
-#youtube-footer-link {
-    color: #ff0033;
-}
-
+#youtube-footer-link,
 #youtube-footer-link:visited {
     color: #ff0033;
 }
 
-#twitch-header-link {
-    color: #9146ff;
-}
 
+#twitch-header-link,
 #twitch-header-link:visited {
     color: #9146ff;
 }
 
-#discord-header-link {
-    color: #5764ef;
-}
-
+#discord-header-link,
 #discord-header-link:visited {
     color: #5764ef;
 }
 
-#altstream-header-link {
-    color: #f97316;
-}
-
+#altstream-header-link,
 #altstream-header-link:visited {
     color: #f97316;
 }
 
-#kofi-header-link {
-    color: #ff5a16;
-}
-
+#kofi-header-link,
 #kofi-header-link:visited {
     color: #ff5a16;
 }
 
-#bsky-link {
-    color: #0071ff
-}
-
+#bsky-link,
 #bsky-link:visited {
     color: #0071ff
 }
 
-#tip-link {
-    color: green;
-}
-
+#tip-link,
 #tip-link:visited {
     color: green;
 }
