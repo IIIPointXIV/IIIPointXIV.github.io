@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta name="description" content="Webpage description goes here" /> -->
+    <!-- <meta charset="utf-8"> -->
+    <title>I'm back</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nova">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/blog-style.css">
+    <link rel="icon" type="image/png" href="../images/ghost_icon_small.png" />
+    <meta property="og:title" content="I'm back" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://iiipointxiv.github.io" />
+    <!-- <meta property="og:image" content="http://my.site.com/images/thumb.png" /> -->
+    <meta property="og:description" content="The best damn site you've ever seen!" />
+    <meta name="theme-color" content="#f4a9b7">
+    <!-- Include this to make the og:image larger 
+    <meta name="twitter:card" content="summary_large_image">-->
+</head>
+<script>
+    // gotten from https://www.xjavascript.com/blog/include-another-html-file-in-a-html-file/
+    fetch('./blog-header.html')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load header.html');
+            return response.text();
+        })
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('header-container').innerHTML = '<p>Header failed to load.</p>';
+        });
+</script>
+
+<header id="header-container"></header>
+
+<body>
+    <h1 class="centered-text intro-header">I've been gone for a while</h1>
+    <div class="main-padding double-spaced indent-text">
+        I've been gone for a while! Sorry about that. Life got busy and I forgot. But with all of the shit going on in
+        the world right now it's nice to come back to something I can work on with no stupid algo bullshit
+    </div>
+    <div class="main-padding double-spaced indent-text">
+        I hope to update this site more! I still have a lot of thoughts
+        as always. I started streaming a lot more! It's been really fun so far. Helps to have a tiny bit of money since
+        my work loves to cut my hours I guess. You can find my links to all of my stuff <a
+            href="../links.html">here.</a>
+    </div>
+    <h1 class="centered-text intro-header">Streaming</h1>
+    <div class="main-padding double-spaced indent-text">
+        Messing with <a href="https://suvidriel.itch.io/vnyan">vnyan</a> has been a lot of fun. There's a lot you can do
+        in it! It feels like you can do pretty much anything you could want and there is lots of support for making even
+        more things with Unity!
+    </div>
+    <div class="main-padding double-spaced indent-text">
+        <a href="https://streamer.bot/">StreamerBot</a> is also really cool! You can do a fuck ton with it normally and
+        then you can even write c# that it will run so you can literally do pretty much anything. I wrote a little thing
+        in it to keep track of my one reward "Count" that goes up by one in cost each time it is redeemed. I had to
+        write some python (ew) to make a little leaderboard that keeps track of how much everyone has wasted on it lol.
+    </div>
+</body>
+
+</html>
