@@ -60,6 +60,9 @@ hr {
     margin-right: 0.5em;
 }
 
+.list-inline {
+    padding-left: 0px;
+}
 
 #youtube-footer-link {
     color: #ff0033;

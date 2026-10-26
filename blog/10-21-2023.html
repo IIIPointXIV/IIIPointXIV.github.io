@@ -21,7 +21,7 @@
 </head>
 <script>
     // gotten from https://www.xjavascript.com/blog/include-another-html-file-in-a-html-file/
-    fetch('../header.html')
+    fetch('./blog-header.html')
         .then(response => {
             if (!response.ok) throw new Error('Failed to load header.html');
             return response.text();
