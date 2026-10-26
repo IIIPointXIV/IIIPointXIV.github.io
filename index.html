@@ -19,17 +19,23 @@
     <meta name="twitter:card" content="summary_large_image">-->
 </head>
 <header>
-    <ul class="list-inline centered-text">
-        <li><a href="./" class="no-decoration black-outline pink-color-text">Home</a></li>
-        <li><a href=".\blog.html" class="no-decoration black-outline white-color-text">Blog</a></li>
-        <li><a href="https://www.youtube.com/channel/UCxSMPPD81i-PACG8u_WdPxg" id="youtube-footer-link"
-                class="no-decoration white-outline" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-        <li><a href="https://www.twitch.tv/iiipointxiv" class="no-decoration white-outline" id="twitch-footer-link"
-                target="_blank" rel="noopener noreferrer">Twitch</a></li>
-        <li><a href="https://discord.gg/UYw2jWeXDn" id="discord-header-link" class="white-outline no-decoration"
-                target="_blank" rel="noopener noreferrer">Discord</a></li>
-    </ul>
-</header>
+<script>
+    // gotten from https://www.xjavascript.com/blog/include-another-html-file-in-a-html-file/
+    fetch('./header.html')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load header.html');
+            return response.text();
+        })
+        .then(html => {
+            document.getElementById('header-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('header-container').innerHTML = '<p>Header failed to load.</p>';
+        });
+</script>
+
+<header id="header-container"></header>
 
 <body>
     <h1 class="centered-text" style="margin-top: 4em;">Yes I know it looks like shit.</h1>
