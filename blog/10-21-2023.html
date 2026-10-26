@@ -33,6 +33,19 @@
             console.error('Error:', error);
             document.getElementById('header-container').innerHTML = '<p>Header failed to load.</p>';
         });
+
+    fetch('./footer.html')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load footer.html');
+            return response.text();
+        })
+        .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('footer-container').innerHTML = '<p>footer failed to load.</p>';
+        });
 </script>
 
 <header id="header-container"></header>
@@ -227,4 +240,5 @@
 
 </body>
 
+<footer id="footer-container"></footer>
 </html>

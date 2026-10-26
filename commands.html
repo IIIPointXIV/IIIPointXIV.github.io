@@ -32,12 +32,26 @@
             console.error('Error:', error);
             document.getElementById('header-container').innerHTML = '<p>Header failed to load.</p>';
         });
+
+    fetch('./footer.html')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load footer.html');
+            return response.text();
+        })
+        .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('footer-container').innerHTML = '<p>footer failed to load.</p>';
+        });
 </script>
 
 <header id="header-container"></header>
 
 <body>
-    <h1 class="centered-text" style="margin-top: 80px;">Here is all of my commands from my <a href="https://www.twitch.tv/iiipointxiv" target="_blank" rel="noopener noreferrer">twitch page!</a></h1>
+    <h1 class="centered-text" style="margin-top: 80px;">Here is all of my commands from my <a
+            href="https://www.twitch.tv/iiipointxiv" target="_blank" rel="noopener noreferrer">twitch page!</a></h1>
     <div class="main-padding double-spaced indent-text" style="margin-top: 100px;">
         Commands
     </div>
@@ -45,19 +59,20 @@
         <li>!clip - Makes a new 30 second clip and posts it in chat</li>
         <li>!gay or !lesbian or !pan - Sends random gay emoji in chat</li>
         <li>!leaderboard - Shows the current leaderboard of who has wasted the most treats on the count redeem</li>
-        <li>!lurk - Shows a message saying that you are going to lurk in chat. Has a different response if you were already lurking</li>
+        <li>!lurk - Shows a message saying that you are going to lurk in chat. Has a different response if you were
+            already lurking</li>
         <li>!ping - Responds with "pong" to show that it can see your messages</li>
         <li>!prime - Informs people of their right to use their prime sub on me</li>
         <li>!help or !commands - Links to this page</li>
         <li>!links - Links to <a href="./links.html">here.</a></li>
-        <li>!model - Gets a link to my <a href="https://vgen.co/VandRStudio/product/-vrm-sera-original-character-chibi/9e17fb7d-03aa-48fb-86c8-609452b8dbfc" target="_blank" rel="noopener noreferrer">model!</a></li>
-        <li>!discord - Sends a link to the <a href="https://discord.gg/UYw2jWeXDn" target="_blank" rel="noopener noreferrer">discord</a> server</li>
+        <li>!model - Gets a link to my <a
+                href="https://vgen.co/VandRStudio/product/-vrm-sera-original-character-chibi/9e17fb7d-03aa-48fb-86c8-609452b8dbfc"
+                target="_blank" rel="noopener noreferrer">model!</a></li>
+        <li>!discord - Sends a link to the <a href="https://discord.gg/UYw2jWeXDn" target="_blank"
+                rel="noopener noreferrer">discord</a> server</li>
     </ul>
 </body>
-<footer>
-    <ul id="main-footer" class="list-inline centered-text">
 
-    </ul>
-</footer>
+<footer id="footer-container"></footer>
 
 </html>

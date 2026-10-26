@@ -32,26 +32,44 @@
             console.error('Error:', error);
             document.getElementById('header-container').innerHTML = '<p>Header failed to load.</p>';
         });
+
+    fetch('./footer.html')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load footer.html');
+            return response.text();
+        })
+        .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('footer-container').innerHTML = '<p>footer failed to load.</p>';
+        });
 </script>
 
 <header id="header-container"></header>
 
 <body>
-    <h1 class="centered-text double-spaced" style="margin-top: 2.5em;">All of my links! <div style="font-size: x-small;">(link tree at home)</div></h1>
+    <h1 class="centered-text double-spaced" style="margin-top: 2.5em;">All of my links! <div
+            style="font-size: x-small;">(link tree at home)</div>
+    </h1>
     <hr>
     <div class="centered-text double-spaced white-outline" style="margin-top: 4em;">
-        <h1><a href="https://altstream.online/iiipointxiv" id="altstream-header-link" class="no-decoration">AltStream</a></h1>
+        <h1><a href="https://altstream.online/iiipointxiv" id="altstream-header-link"
+                class="no-decoration">AltStream</a></h1>
         <h1><a href="https://ko-fi.com/iiipointxiv" id="kofi-header-link" class="no-decoration">Ko-Fi</a></h1>
-        <h1><a href="https://www.youtube.com/@iiipointxiv" id="youtube-footer-link" class="no-decoration">YouTube</a></h1>
-        <h1><a href="https://www.youtube.com/@IIIPointXIV_Vods" id="youtube-footer-link" class="no-decoration">YouTube Vods</a></h1>
+        <h1><a href="https://www.youtube.com/@iiipointxiv" id="youtube-footer-link" class="no-decoration">YouTube</a>
+        </h1>
+        <h1><a href="https://www.youtube.com/@IIIPointXIV_Vods" id="youtube-footer-link" class="no-decoration">YouTube
+                Vods</a></h1>
         <h1><a href="https://www.twitch.tv/iiipointxiv" id="twitch-footer-link" class="no-decoration">Twitch</a></h1>
-        <h1><a href="https://discord.com/invite/UYw2jWeXDn" id="discord-header-link" class="no-decoration">Discord</a></h1>
-        <h1><a href="https://bsky.app/profile/iiipointxiv.bsky.social" id="bsky-link" class="no-decoration">Blusky</a></h1>
+        <h1><a href="https://discord.com/invite/UYw2jWeXDn" id="discord-header-link" class="no-decoration">Discord</a>
+        </h1>
+        <h1><a href="https://bsky.app/profile/iiipointxiv.bsky.social" id="bsky-link" class="no-decoration">Blusky</a>
+        </h1>
         <h1><a href="https://streamelements.com/iiipointxiv/tip" id="tip-link" class="no-decoration">Tip</a></h1>
     </div>
 </body>
-<footer>
-    <div style="font-size: 3px; color: #3f8ead">if you see this ur gay</div>
-</footer>
+<footer id="footer-container"></footer>
 
 </html>
